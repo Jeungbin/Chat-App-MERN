@@ -4,7 +4,7 @@ const UserSchema = new mongoose.Schema(
   {
     username: {
       type: String,
-      required: true,
+      require: true,
       min: 3,
       max: 20,
       unique: true,
@@ -12,7 +12,6 @@ const UserSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
-      min: 3,
       max: 50,
       unique: true,
     },
@@ -29,11 +28,11 @@ const UserSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    follers: {
+    followers: {
       type: Array,
       default: [],
     },
-    followins: {
+    followings: {
       type: Array,
       default: [],
     },
